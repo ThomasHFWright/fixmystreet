@@ -41,7 +41,7 @@ inc/
 _Inline/
 *.pyc
 docker-compose.override.yml
-setup.env
+.env
 
 #config
 /conf/fixmybsresort-general.yml
