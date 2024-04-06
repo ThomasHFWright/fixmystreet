@@ -41,6 +41,7 @@ inc/
 _Inline/
 *.pyc
 #docker-compose.override.yml
+setup.env
 
 # Optional Docker config
 docker/.env

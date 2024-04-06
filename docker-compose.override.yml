@@ -9,3 +9,6 @@ services:
   postgres:
     environment:
       POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
+env_file:
+  - path: ./setup.env
+    required: true
