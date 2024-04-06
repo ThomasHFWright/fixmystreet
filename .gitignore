@@ -40,7 +40,7 @@ blib/
 inc/
 _Inline/
 *.pyc
-#docker-compose.override.yml
+docker-compose.override.yml
 setup.env
 
 # Optional Docker config
