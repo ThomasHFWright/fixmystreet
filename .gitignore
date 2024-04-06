@@ -43,6 +43,9 @@ _Inline/
 docker-compose.override.yml
 setup.env
 
+#config
+/conf/fixmybsresort-general.yml
+
 # Optional Docker config
 docker/.env
 docker/ssl.crt
