@@ -44,7 +44,7 @@ _Inline/
 .env
 
 #config
-/conf/fixmybsresort-general.yml
+/conf/general.yml
 
 # Optional Docker config
 docker/.env
