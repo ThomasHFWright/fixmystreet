@@ -2,7 +2,7 @@
 # them being checked out with CRLF line endings (on Windows), which
 # breaks if they e.g. run vagrant up.
 
-* -text
+#* -text
 
 # Fix language detection on GitHub:
 *.pm linguist-language=Perl
