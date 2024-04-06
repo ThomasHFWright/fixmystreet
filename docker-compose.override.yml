@@ -1,0 +1,11 @@
+services:
+  nginx:
+    ports:
+      - "$PORT:80"
+    environment:
+      POSTGRES_PASSWORD: '$POSTGRES_PASSWORD'
+      SUPERUSER_EMAIL: '$SUPERUSER_EMAIL'
+      SUPERUSER_PASSWORD: "$SUPERUSER_PASSWORD"
+  postgres:
+    environment:
+      POSTGRES_PASSWORD: '$POSTGRES_PASSWORD'
