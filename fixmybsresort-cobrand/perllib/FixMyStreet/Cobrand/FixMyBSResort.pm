@@ -5,4 +5,4 @@ sub is_council {
     return 1; # Return 1 to indicate this is a council cobrand
 }
 
-sub council_name { return 'Bom Sucesso Condomínio'; }
+sub council_name { return 'Bom Sucesso Condom\u00EDnio'; }
