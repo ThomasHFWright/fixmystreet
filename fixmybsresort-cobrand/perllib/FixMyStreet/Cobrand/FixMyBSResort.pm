@@ -7,3 +7,9 @@ sub is_council {
 }
 
 sub council_name { return "Bom Sucesso Condomínio"; }
+
+=item * Default map zoom level of 6
+
+=cut
+
+sub default_map_zoom { 6 }
