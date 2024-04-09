@@ -352,3 +352,15 @@ htmp[lang='fr'] .form-txt-submit-box input[type=submit] {
 .demtools-link a:hover {
 	color: #d51c1c;
 }
+.dev-site-notice {
+	font-size: 1.5em;
+	color: #fff;
+	background-color: #f00;
+	position: absolute;
+	padding: 0.1em 3em;
+	top: 1.5em;
+	left: -3em;
+	transform: rotate(-45deg);
+	z-index: 2;
+	pointer-events: none;
+}
