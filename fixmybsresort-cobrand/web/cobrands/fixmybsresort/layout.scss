@@ -1,0 +1,392 @@
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_300-webfont.eot');
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_300-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_300-webfont.woff') format('woff'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_300-webfont.ttf') format('truetype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_300-webfont.svg#MuseoSans300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_300_Italic-webfont.eot');
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_300_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_300_Italic-webfont.woff') format('woff'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_300_Italic-webfont.ttf') format('truetype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_300_Italic-webfont.svg#MuseoSans300Italic') format('svg');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_500-webfont.eot');
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_500-webfont.woff') format('woff'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_500-webfont.ttf') format('truetype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_500-webfont.svg#MuseoSans500') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MuseoSans';
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_500_Italic-webfont.eot');
+  src: url('/cobrands/fixmystreet.com/fonts/MuseoSans_500_Italic-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_500_Italic-webfont.woff') format('woff'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_500_Italic-webfont.ttf') format('truetype'),
+       url('/cobrands/fixmystreet.com/fonts/MuseoSans_500_Italic-webfont.svg#MuseoSans500Italic') format('svg');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Museo300-display';
+  src: url('/cobrands/fixmystreet.com/fonts/Museo300-Regular-webfont.eot');
+  src: url('/cobrands/fixmystreet.com/fonts/Museo300-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/cobrands/fixmystreet.com/fonts/Museo300-Regular-webfont.woff') format('woff'),
+       url('/cobrands/fixmystreet.com/fonts/Museo300-Regular-webfont.ttf') format('truetype'),
+       url('/cobrands/fixmystreet.com/fonts/Museo300-Regular-webfont.svg#Museo300') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$body-font: MuseoSans, Helmet, Freesans, sans-serif;
+
+/* Opera has a bug (from around 10.5 upwards to current 11.6) with showing the
+ * table caption *at all* if the header is set to a font-face :( */
+noindex:-o-prefocus, #site-header {
+  font-family: sans-serif;
+}
+
+h3, h4,
+.item-list__heading {
+    font-weight: bold;
+}
+
+@import "_colours";
+@import "../sass/layout";
+
+body {
+    @media ($high-dpi-screen) {
+        background-image: url(/cobrands/fixmystreet.com/images/tile@2x.jpg);
+        background-size: 500px;
+    }
+}
+body.mappage {
+    background-image: none;
+}
+
+// Tiled background stripe, not plain colour
+#front-main {
+    @media ($high-dpi-screen) {
+        background-image: url(/cobrands/fixmystreet.com/images/tile-y@2x.jpg);
+        background-size: 500px;
+    }
+}
+
+.nav-menu--main {
+    a:hover {
+        @include linear-gradient(#000, #444 10%, #444 95%, #111);
+    }
+    a.report-a-problem-btn:hover {
+        background: $primary/1.1;
+    }
+}
+
+#site-header {
+    background: none;
+    border-image-source: url(/cobrands/fixmystreet.com/images/tile-y.jpg);
+    border-image-slice: 4 0 0 0;
+    border-image-repeat: repeat;
+
+    @media ($high-dpi-screen) {
+        border-image-source: url(/cobrands/fixmystreet.com/images/tile-y@2x.jpg);
+        border-image-slice: 8 0 0 0;
+    }
+}
+body.mappage {
+    #site-header {
+        @include linear-gradient(#000, #222 10%, #222 90%, #000);
+    }
+}
+
+#lang-switcher {
+    z-index: 1;
+    #{$right}: 0;
+    top: -1em;
+}
+
+body.twothirdswidthpage,
+body.fullwidthpage {
+    #front-main {
+        color: #333;
+        padding-bottom: 5em;
+        padding-top: 4em;
+
+        h1 {
+            font-size: 3em;
+            font-weight: bold;
+            font-family: $body-font;
+        }
+        h2 {
+            font-family: $body-font;
+        }
+        #postcodeForm {
+            div {
+                font-size: 1.3em;
+                width: 24em;
+                label {
+                    font-family: $body-font;
+                }
+                input#pc {
+                    color: #777;
+                    font-size: 0.9em;
+                    height: 2.6em;
+                    &:focus {
+                        outline: 0;
+                    }
+                }
+                input#sub {
+                    font-size: 1.1em;
+                    height: 2.4em;
+                    font-family: $body-font;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+body.frontpage {
+    $fms-logo-width: 250px; // 300px without the mySociety badge
+    $fms-logo-height: 50px; // 60px "
+    $fms-logo-vertical-margin: 2em;
+    $mysociety-badge-width: (190px * 0.5);
+    $mysociety-badge-height: (254px * 0.5);
+
+    #site-logo {
+        margin: $fms-logo-vertical-margin 0;
+        width: $fms-logo-width;
+        margin-left: $mysociety-badge-width;
+        height: $fms-logo-height;
+        background: none;
+
+        // Override the width="175" height="35" attributes on the svg element,
+        // forcing the SVG contents to stretch to the new, larger, size.
+        svg {
+            width: $fms-logo-width;
+            height: $fms-logo-height;
+            margin-top: 0; // no need for the vertical centering any more
+        }
+    }
+
+    #mysociety-badge {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        margin-left: -0.75em;
+        top: -($fms-logo-vertical-margin + $header-top-border-width);
+        width: $mysociety-badge-width;
+        height: $mysociety-badge-height;
+        outline-offset: -10px;
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    #main-nav {
+        height: calc(#{$fms-logo-height} + #{$fms-logo-vertical-margin} * 2);
+        margin-top: 0;
+        margin-left: $fms-logo-width + $mysociety-badge-width + 16px; // Prevent overlapping with logo
+    }
+
+    .nav-menu li {
+        // When list items wrap onto two lines, reduce vertical space between the lines.
+        margin-top: -0.25em;
+        margin-bottom: -0.25em;
+    }
+
+    .site-logo__fallback {
+        width: $fms-logo-width;
+        padding-top: $fms-logo-height;
+        // No need for svg-background-image() here because the
+        // logo on the homepage is an inline SVG, and the only browsers
+        // not to show it will be IE8 and below, which are @1x.
+        background-image: url("/cobrands/fixmystreet.com/images/site-logo-homepage.png");
+        background-size: $fms-logo-width $fms-logo-height;
+    }
+
+    .content {
+        margin-top: -3em; // overlap the bottom of #front-main
+    }
+}
+
+.next-steps {
+  @include flex-container();
+  margin-bottom: 2em; // add some space between this and the footer
+}
+
+.next-steps__step {
+  font-family: $body-font;
+  flex: 1;
+  padding: 1.8em;
+
+  & + .next-steps__step {
+    border-top: none;
+    border-#{$left}: 1px solid #ede8c9;
+  }
+
+  h2 {
+    font-family: inherit;
+    font-weight: bold;
+    line-height: 1.2em;
+  }
+
+  p {
+    line-height: 1.4em;
+  }
+}
+
+body.unresponsive-council {
+    .container .content {
+        padding: 0;
+        margin-bottom: 4em;
+    }
+
+    h1, h2 {
+        font-family: inherit;
+        font-weight: bold;
+    }
+}
+
+.unresponsive-council__header,
+.unresponsive-council__body {
+    padding: 1.5em;
+    font-size: 1.3em;
+}
+
+.unresponsive-council__header {
+    background-color: $primary;
+
+    border-bottom: none;
+    margin-bottom: 0;
+
+    h1 {
+        font-size: 2.5em;
+        line-height: 1em;
+        margin-bottom: 0.2em;
+    }
+}
+
+.unresponsive-council__body {
+    p {
+        max-width: 26em;
+    }
+}
+
+.unresponsive-council-cta {
+    margin: 1.5em 0;
+    max-width: 20em;
+    padding-#{$right}: 6em;
+    background-image: url(/cobrands/fixmystreet.com/images/unresponsive-council-cta-arrow.png);
+    background-position: $right center;
+    background-repeat: no-repeat;
+
+    @media ($high-dpi-screen) {
+        background-image: url(/cobrands/fixmystreet.com/images/unresponsive-council-cta-arrow@2.png);
+        background-size: 60px;
+    }
+}
+
+.mysoc-footer {
+  margin-top: 3em;
+  // The below lines are so that on e.g. /about/posters the footer will move on
+  // top of the fixed sidebar in narrow height situations.
+  position: relative;
+  z-index: 1;
+}
+body.mappage .mysoc-footer {
+    display: none;
+}
+
+// FMS Pro advert
+footer {
+  background: $base_bg; // (images/tile.jpg)
+  margin: -1em;
+  padding: 1em 0;
+
+  @media ($high-dpi-screen) {
+    background-image: url(/cobrands/fixmystreet.com/images/tile@2x.jpg);
+    background-size: 500px;
+  }
+}
+
+.fms-footer-cta {
+    flex-direction: row;
+
+    &__item {
+        flex-basis: 33%;
+    }
+}
+
+.footer-marketing {
+    margin: 0;
+    width: auto;
+}
+
+.healthcheck-unit {
+    padding-left: 94px;
+    background-size: 64px;
+
+    & + & {
+        margin-top: 2em;
+    }
+}
+
+.healthcheck-cta-trio {
+    @include clearfix();
+    margin: 0 -2em;
+    text-align: center;
+
+    .dashboard-item {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+}
+
+.dashboard-fms-case-studies {
+    & > div {
+        @include flex-container();
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+
+        a {
+            @include box-sizing(border-box);
+            display: block;
+            width: 48%;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.council-dashboard-login {
+    margin: -1em;
+    padding: 2em;
+
+    form {
+        margin-top: 4em;
+        margin-bottom: 4em;
+    }
+}
+
+.area-reports-dashboard-cta {
+    // To overpower `body.mappage .full-width` in core.
+    body.mappage & {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+}
