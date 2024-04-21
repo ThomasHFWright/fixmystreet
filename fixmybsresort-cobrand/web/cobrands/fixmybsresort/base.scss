@@ -18,24 +18,19 @@
   border: 2px solid #fff;
 }
 .dev-site-notice:hover {
-  opacity: 0.3; /* Mostly transparent when moused over */
-}
-@media (max-width: 768px) {
-  .dev-site-notice {
-          opacity: 0.8; /* Starting opacity on mobile */
+  opacity: 0.2; // immediatly lower opactity when mousing over
+
+  .dev-site-notice { //Fade to low opacity over 3.5s
+      opacity: 0.8;
       animation: fadeOutNotice 3.5s ease 1s 1 forwards;
   }
 
-  .dev-site-notice:hover {
-          opacity: 0.2; /* Mostly transparent when moused over */
-  }
-
   @keyframes fadeOutNotice {
-          from {
-              opacity: 0.8; /* Match the starting opacity on mobile */
-          }
-          to {
-              opacity: 0.2; /* Desired final opacity */
-          }
+      from {
+          opacity: 0.8; // starting opactity
+      }
+      to {
+          opacity: 0.2; // final opactity
+      }
   }
 }
