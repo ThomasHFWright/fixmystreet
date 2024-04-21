@@ -1,0 +1,14 @@
+body.frontpage {
+    $fms-logo-width: 250px; // 300px without the mySociety badge
+    $fms-logo-height: 50px; // 60px "
+
+    #site-logo {
+        width: $fms-logo-width;
+        padding-top: $fms-logo-height;
+        // No need for svg-background-image() here because the
+        // logo on the homepage is an inline SVG, and the only browsers
+        // not to show it will be IE8 and below, which are @1x.
+        background-image: url("/cobrands/fixmybsresort/images/site-logo-homepage.png");
+        background-size: $fms-logo-width $fms-logo-height;
+    }
+}
