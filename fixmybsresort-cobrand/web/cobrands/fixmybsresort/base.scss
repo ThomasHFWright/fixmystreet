@@ -24,6 +24,7 @@
 
   &:hover {
     opacity: 0.2; // Immediately lower opacity when mousing over
+    animation: none; // Stop any ongoing animations
   }
 
   @keyframes fadeOutNotice {
@@ -31,7 +32,7 @@
       opacity: 0.8;
     }
     to {
-      opacity: 0.2; // Gradually fade to this opacity
+      opacity: 0.4; // Gradually fade to this opacity
     }
   }
 }
