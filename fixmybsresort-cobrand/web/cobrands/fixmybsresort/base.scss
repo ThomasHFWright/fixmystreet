@@ -22,11 +22,6 @@
   opacity: 0.8; // Default opacity when not hovered
   animation: fadeOutNotice 3.5s ease 1s forwards; // Animation starts 1 second after the element loads
 
-  &:hover {
-    opacity: 0.2; // Immediately lower opacity when mousing over
-    animation: none; // Stop any ongoing animations
-  }
-
   @keyframes fadeOutNotice {
     from {
       opacity: 0.8;
