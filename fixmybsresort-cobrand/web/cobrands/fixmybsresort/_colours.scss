@@ -1,27 +1,31 @@
-/* LAYOUT */
-
-// If you are wanting a right-to-left layout, uncomment the following line.
-// $direction: right;
-
 /* COLOURS */
 
-$orange: #ff9900;
-$bluey: #6688ff;
+$container-max-width: 66em;
 
-$primary: $orange;
-$primary_b: #000000;
-$primary_text: #222222;
+$primary: #FFD000;
+$primary_b: #F3B11E; // For the box around the front page postcode form only
+$primary_text: #222;
+$primary_link_color: $primary_text;
+$primary_link_hover_color: rgba($primary_text, 0.8);
 
-$base_bg: $bluey;
-$base_fg: #000;
+// Tiled main body background
+$base_bg: #272727 url(/cobrands/fixmystreet.com/images/tile.jpg) 0 0 repeat;
+$base_fg: #fff;
 
-$nav_background_colour: $bluey;
-$nav_colour: #000;
-$nav_hover_background_colour: $primary;
+$nav_background_colour: #222;
+$nav_colour: #fff;
+$nav_hover_background_colour: #444;
 
-// Colour used for front page 'how to report a problem' steps
-$col_big_numbers: #ccc;
+// The "Click map" box on /around
+$col_click_map: #00BD08;
 
-$col_click_map: $bluey;
+$itemlist_item_background: #f6f6f6;
+$itemlist_item_background_hover: mix(#fff, $primary, 70%);
 
-$front-main-background-desktop: $orange;
+$layout_front_stats_color: #222;
+
+$nicetable-stripe-background: #f3f3f3;
+
+$high-dpi-screen: '-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi';
+
+$front-main-background-desktop: $primary url(/cobrands/fixmystreet.com/images/tile-y.jpg);
