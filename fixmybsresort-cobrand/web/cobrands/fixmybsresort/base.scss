@@ -17,20 +17,21 @@
   pointer-events: auto;
   border: 2px solid #fff;
 }
-.dev-site-notice:hover {
-  opacity: 0.2; // immediatly lower opactity when mousing over
 
-  .dev-site-notice { //Fade to low opacity over 3.5s
-      opacity: 0.8;
-      animation: fadeOutNotice 3.5s ease 1s 1 forwards;
+.dev-site-notice {
+  opacity: 0.8; // Default opacity when not hovered
+  animation: fadeOutNotice 3.5s ease 1s forwards; // Animation starts 1 second after the element loads
+
+  &:hover {
+    opacity: 0.2; // Immediately lower opacity when mousing over
   }
 
   @keyframes fadeOutNotice {
-      from {
-          opacity: 0.8; // starting opactity
-      }
-      to {
-          opacity: 0.2; // final opactity
-      }
+    from {
+      opacity: 0.8;
+    }
+    to {
+      opacity: 0.2; // Gradually fade to this opacity
+    }
   }
 }
