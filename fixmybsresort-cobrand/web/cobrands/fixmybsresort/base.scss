@@ -19,12 +19,12 @@
 }
 
 .dev-site-notice {
-  opacity: 0.8; // Default opacity when not hovered
+  opacity: 1; // Default opacity when not hovered
   animation: fadeOutNotice 3.5s ease 1s forwards; // Animation starts 1 second after the element loads
 
   @keyframes fadeOutNotice {
     from {
-      opacity: 0.8;
+      opacity: 1;
     }
     to {
       opacity: 0.2; // Gradually fade to this opacity
