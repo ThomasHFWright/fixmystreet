@@ -7,8 +7,8 @@ services:
       SUPERUSER_EMAIL: '${SUPERUSER_EMAIL}'
       SUPERUSER_PASSWORD: '${SUPERUSER_PASSWORD}'
     volumes:
-      - ../fixmystreet/conf/general.yml:/var/www/fixmystreet/fixmystreet/conf/general.yml
-      - ../fixmystreet/fixmybsresort-cobrand:/var/www/fixmystreet/cobrand
+      - ./conf/general.yml:/var/www/fixmystreet/fixmystreet/conf/general.yml
+      - ./fixmybsresort-cobrand:/var/www/fixmystreet/cobrand
   postgres:
     environment:
       POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
