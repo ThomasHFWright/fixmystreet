@@ -1,11 +1,14 @@
 version: '3'
 
 services:
+  nginx:
+    restart: always
   fixmystreet:
     environment:
       POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
       SUPERUSER_EMAIL: '${SUPERUSER_EMAIL}'
       SUPERUSER_PASSWORD: '${SUPERUSER_PASSWORD}'
+    restart: always
     volumes:
       - ./conf/general.yml:/var/www/fixmystreet/fixmystreet/conf/general.yml
       - ./fixmybsresort-cobrand:/var/www/fixmystreet/cobrand
@@ -15,6 +18,7 @@ services:
       POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
       ports:
       - "5432:5432"
+    restart: always
   pgadmin:
     image: dpage/pgadmin4:6.12
     container_name: pgadmin4_container
@@ -26,6 +30,8 @@ services:
       PGADMIN_DEFAULT_PASSWORD: '${PGADMIN_PASSWORD}'
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+  memcached:
+    restart: always
 volumes:
   fixmystreet-pgdata:
   pgadmin-data:
