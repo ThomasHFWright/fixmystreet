@@ -9,6 +9,7 @@ services:
     volumes:
       - ./conf/general.yml:/var/www/fixmystreet/fixmystreet/conf/general.yml
       - ./fixmybsresort-cobrand:/var/www/fixmystreet/cobrand
+      - ./locale:/var/www/fixmystreet/locale
   postgres:
     environment:
       POSTGRES_PASSWORD: '${POSTGRES_PASSWORD}'
