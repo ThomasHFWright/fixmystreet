@@ -1,5 +1,5 @@
-package FixMyStreet::Cobrand::Default;
-use base 'FixMyStreet::Cobrand::Base';
+package FixMyStreet::Cobrand::FixMyBSResort;
+use base 'FixMyStreet::Cobrand::Default';
 use utf8;
 
 use strict;
